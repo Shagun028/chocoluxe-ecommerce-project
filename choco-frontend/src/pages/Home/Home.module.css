@@ -1,0 +1,635 @@
+/* src/pages/Home/Home.module.css */
+.homeContainer {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.heroSection {
+  background: linear-gradient(135deg, rgba(93, 64, 55, 0.95), rgba(139, 69, 19, 0.9)), 
+              url('https://images.unsplash.com/photo-1493925410384-84f842e616fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920');
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 800px;
+  z-index: 2;
+  position: relative;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.heroBadge svg {
+  color: #FFD700;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.heroButtonPrimary {
+  padding: 1.2rem 3rem;
+  background: linear-gradient(135deg, #D2691E, #8B4513);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.heroButtonPrimary:hover {
+  background: linear-gradient(135deg, #8B4513, #5D4037);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.heroButtonSecondary {
+  padding: 1.2rem 3rem;
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.heroButtonSecondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* Chocolate Particles */
+.chocolateParticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  opacity: 0.6;
+  filter: blur(1px);
+}
+
+/* Common Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionHeader h2 {
+  font-size: 3rem;
+  color: #5D4037;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.sectionHeader p {
+  font-size: 1.2rem;
+  color: #795548;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sectionTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.viewAllLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #D2691E;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.viewAllLink:hover {
+  color: #8B4513;
+  gap: 0.8rem;
+}
+
+/* Features Section */
+.featuresSection {
+  padding: 6rem 2rem;
+  background: #FFF8F0;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.featureCard {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.featureCard.active {
+  border-color: #D2691E;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(210, 105, 30, 0.1);
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(93, 64, 55, 0.1);
+}
+
+.featureIcon {
+  color: #D2691E;
+  margin-bottom: 1.5rem;
+}
+
+.featureCard h3 {
+  font-size: 1.5rem;
+  color: #5D4037;
+  margin-bottom: 1rem;
+}
+
+.featureCard p {
+  color: #795548;
+  line-height: 1.6;
+}
+
+/* Products Section */
+.productsSection {
+  padding: 6rem 2rem;
+  background: white;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.productCard {
+  background: #FFF8F0;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(210, 105, 30, 0.1);
+}
+
+.productCard:hover {
+  box-shadow: 0 20px 40px rgba(93, 64, 55, 0.1);
+}
+
+.productImage {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.productCard:hover .productImage img {
+  transform: scale(1.05);
+}
+
+.wishlistButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #5D4037;
+  transition: all 0.3s;
+}
+
+.wishlistButton:hover {
+  background: #D2691E;
+  color: white;
+}
+
+.bestSellerBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: linear-gradient(135deg, #FFD700, #FFA000);
+  color: #5D4037;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.productInfo {
+  padding: 2rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #5D4037;
+}
+
+.reviews {
+  color: #795548;
+  font-size: 0.9rem;
+}
+
+.productInfo h3 {
+  font-size: 1.5rem;
+  color: #5D4037;
+  margin-bottom: 0.8rem;
+}
+
+.productDescription {
+  color: #795548;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.flavorTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.flavorTag {
+  background: rgba(210, 105, 30, 0.1);
+  color: #D2691E;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.productFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5D4037;
+}
+
+.addToCartButton {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #8B4513, #D2691E);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.addToCartButton:hover {
+  background: linear-gradient(135deg, #5D4037, #8B4513);
+}
+
+/* Subscription Banner */
+.subscriptionBanner {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #5D4037, #8B4513);
+  color: white;
+}
+
+.bannerContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bannerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bannerContent h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.bannerContent p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.bannerFeatures {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.bannerFeatures span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subscribeButton {
+  padding: 1.2rem 3rem;
+  background: white;
+  color: #5D4037;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+
+.subscribeButton:hover {
+  background: #FFF3E0;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials */
+.testimonialsSection {
+  padding: 6rem 2rem;
+  background: #FFF8F0;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.testimonialCard {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(93, 64, 55, 0.1);
+  transition: all 0.3s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(93, 64, 55, 0.15);
+}
+
+.testimonialStars {
+  display: flex;
+  gap: 0.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonialText {
+  font-size: 1.1rem;
+  color: #5D4037;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorAvatar {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #8B4513, #D2691E);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.testimonialAuthor h4 {
+  color: #5D4037;
+  margin-bottom: 0.2rem;
+}
+
+.testimonialAuthor p {
+  color: #795548;
+  font-size: 0.9rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3E0);
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  font-size: 3rem;
+  color: #5D4037;
+  margin-bottom: 1rem;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  color: #795548;
+  margin-bottom: 3rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButtonPrimary {
+  padding: 1.2rem 3rem;
+  background: linear-gradient(135deg, #D2691E, #8B4513);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ctaButtonPrimary:hover {
+  background: linear-gradient(135deg, #8B4513, #5D4037);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButtonSecondary {
+  padding: 1.2rem 3rem;
+  background: transparent;
+  color: #5D4037;
+  border: 2px solid #D2691E;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ctaButtonSecondary:hover {
+  background: rgba(210, 105, 30, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+  
+  .bannerContent h2 {
+    font-size: 2rem;
+  }
+  
+  .ctaContent h2 {
+    font-size: 2rem;
+  }
+  
+  .productsGrid,
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bannerFeatures {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+  }
+}

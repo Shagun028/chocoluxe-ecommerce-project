@@ -1,0 +1,21 @@
+.placeholder-section {
+  padding: 8rem 0;
+  text-align: center;
+  background: white;
+}
+
+.placeholder-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #3D1C0A;
+  margin-bottom: 1rem;
+}
+
+.placeholder-section p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  color: #1A0F07;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}

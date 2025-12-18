@@ -1,0 +1,171 @@
+/* src/pages/Products/Products.module.css */
+.productsContainer {
+  min-height: 100vh;
+  background: #FFF8F0;
+  width: 100%;
+}
+
+/* Hero Banner */
+.heroBanner {
+  background: linear-gradient(rgba(93, 64, 55, 0.9), rgba(139, 69, 19, 0.8)), 
+              url('https://images.unsplash.com/photo-1499195333224-3ce974eecb47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.bannerContent h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.bannerContent p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Filters Sidebar - Hidden by default on mobile */
+.filtersSidebar {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(93, 64, 55, 0.1);
+  border: 1px solid rgba(210, 105, 30, 0.1);
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+  display: block; /* Ensure it displays */
+}
+
+/* Main Content - FIX THIS SECTION */
+.mainContent {
+  padding: 1rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Products Grid - UPDATED */
+.productsGrid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  gap: 2.5rem !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* If grid still doesn't work, use flexbox fallback */
+.productsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.productCard {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(93, 64, 55, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(210, 105, 30, 0.1);
+  flex: 1 1 300px; /* Flexbox fallback */
+  max-width: 350px;
+}
+
+/* Rest of the CSS remains the same... */
+
+/* Controls Bar */
+.controlsBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Responsive Design - UPDATED */
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  
+  .filtersSidebar {
+    position: static;
+    margin-bottom: 2rem;
+  }
+  
+  .productsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+  }
+  
+  .productCard {
+    flex: 1 1 calc(50% - 2.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroBanner {
+    padding: 4rem 1rem;
+  }
+  
+  .bannerContent h1 {
+    font-size: 2.5rem;
+  }
+  
+  .container {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .productsGrid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .productCard {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  
+  .controlsBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .productsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+  }
+  
+  .productCard {
+    flex: 1 1 calc(50% - 2.5rem);
+  }
+}
+
+@media (min-width: 1025px) {
+  .productsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  }
+  
+  .productCard {
+    flex: 1 1 calc(33.333% - 2.5rem);
+  }
+}

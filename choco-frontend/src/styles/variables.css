@@ -1,0 +1,50 @@
+:root {
+  /* Color Palette - Chocolate Inspired */
+  --color-primary: #3D1C0A;
+  --color-secondary: #8B4513;
+  --color-accent: #D2691E;
+  --color-light: #F5E9DE;
+  --color-dark: #1A0F07;
+  --color-white: #FFFFFF;
+  --color-success: #2E7D32;
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+  
+  /* Effects */
+  --shadow-soft: 0 4px 20px rgba(61, 28, 10, 0.08);
+  --shadow-medium: 0 8px 32px rgba(61, 28, 10, 0.12);
+  --shadow-hard: 0 12px 48px rgba(61, 28, 10, 0.16);
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  /* Z-index layers */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal: 400;
+  --z-popover: 500;
+  --z-toast: 600;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-md: 1.5rem;
+    --space-lg: 3rem;
+    --space-xl: 4rem;
+  }
+}

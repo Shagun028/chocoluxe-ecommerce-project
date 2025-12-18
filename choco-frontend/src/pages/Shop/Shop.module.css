@@ -1,0 +1,110 @@
+.shop {
+  padding-top: 120px;
+  padding-bottom: var(--space-xl);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.heroDescription {
+  max-width: 600px;
+  margin: var(--space-md) auto 0;
+  color: var(--color-dark);
+  opacity: 0.8;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.filterLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.categoryFilters {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.categoryFilter {
+  padding: 0.5rem 1.5rem;
+  background: var(--color-light);
+  border: none;
+  border-radius: var(--radius-full);
+  color: var(--color-dark);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  
+  &:hover {
+    background: rgba(61, 28, 10, 0.1);
+    color: var(--color-accent);
+  }
+  
+  &.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+}
+
+.sortGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.sortLabel {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.sortSelect {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(61, 28, 10, 0.2);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-dark);
+  font-family: var(--font-body);
+  cursor: pointer;
+  
+  &:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.loadMore {
+  text-align: center;
+}

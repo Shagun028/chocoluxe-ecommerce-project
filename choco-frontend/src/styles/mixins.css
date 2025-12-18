@@ -1,0 +1,35 @@
+@define-mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@define-mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@define-mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+@define-mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@define-mixin aspect-ratio $width, $height {
+  position: relative;
+  padding-bottom: calc($height / $width * 100%);
+  
+  & > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

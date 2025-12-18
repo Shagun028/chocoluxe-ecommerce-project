@@ -1,0 +1,139 @@
+.about {
+  padding-top: 120px;
+}
+
+.hero {
+  text-align: center;
+  padding: var(--space-xl) 0;
+  background: linear-gradient(135deg, var(--color-light) 0%, #f8f0e9 100%);
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroDescription {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-dark);
+  opacity: 0.9;
+  margin-top: var(--space-md);
+}
+
+.mission {
+  padding: var(--space-xl) 0;
+  background: var(--color-white);
+}
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.missionContent {
+  max-width: 500px;
+}
+
+.missionTitle {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+}
+
+.missionText {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-dark);
+  opacity: 0.9;
+}
+
+.values {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.valueCard {
+  background: var(--color-light);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  transition: var(--transition-smooth);
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+  }
+}
+
+.valueIcon {
+  width: 64px;
+  height: 64px;
+  background: var(--color-white);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+  color: var(--color-accent);
+}
+
+.valueTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.valueDescription {
+  color: var(--color-dark);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.timeline {
+  padding: var(--space-xl) 0;
+  background: var(--color-light);
+}
+
+.timelineContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.milestone {
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.milestoneYear {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-heading);
+}
+
+.milestoneTitle {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.milestoneDescription {
+  color: var(--color-dark);
+  opacity: 0.8;
+  line-height: 1.6;
+}

@@ -1,0 +1,23 @@
+.container {
+  @mixin flex-center;
+  padding: var(--space-lg);
+}
+
+.spinner {
+  border: 3px solid;
+  border-top-color: transparent;
+  border-radius: 50%;
+  position: relative;
+}
+
+.innerCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  background: currentColor;
+  border-radius: 50%;
+  opacity: 0.2;
+}

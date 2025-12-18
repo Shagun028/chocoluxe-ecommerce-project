@@ -1,0 +1,4 @@
+.icon {
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
